@@ -1,0 +1,75 @@
+% -----------------------------------------------------------------------------
+%                                 Our Approach
+% -----------------------------------------------------------------------------
+\newpage                                                 \chapter{Our Approach}
+
+
+UBIQUITOUS BINAURAL AUDIO INTERFACE
+
+Irys is an audible interface designed for use primarily on the web on devices
+that can produce sound through head-phones. The interface places sound images
+around the user, providing them with a 3D sound environment to interact with
+their technology.
+
+The conventional binaural audio system works well if the listener stays at the
+position (usually along the perpendicu-lar bisector of the two points of sound)
+corresponding to the presumed binaural synthesizer B. However, once the listener
+moves away from the sweet spot, system perfor-mance degrades rapidly.
+
+If the system intends to keep the virtual sound source at the same location,
+when the head moves independent of the sound sources, the binaural synthesizer
+shall update its HRTF matrix to reflect the movement. In addition, the acoustic
+transfer matrix C needs to be updated too, which leads to a varying crosstalk
+canceller matrix H. The updates of B and H were referred as “dynamic binaural
+synthesis” and “dynamic crosstalk canceller”, respectively [6].
+
+For this project, we will not concern ourselves with the case that the user is
+moving independent of the audio source and assume that the user is either in a
+stationary environment or has headphones to remove the need for external
+monitoring and real time updating of the audio convolutions.
+
+In this paper, we propose to build a personal 3D audio sys-tem to draw sound
+images around the user. The virtual en-vironment is depicted in Figure 2.  The
+goal of this project is to create a development environment that allows sound
+images to be placed arbitrarily around the user to depict content audibly.
+
+Four physical interfaces were explored: native desktop ap-plications, Android
+handhelds, iOS handhelds, and the web. Each medium provides different drawbacks
+and benefits for the interface being built.\\
+
+\textbf{OpenAL} is a cross-platform open sourced library that pro-vides
+efficient rendering of multichannel three-dimensional positional audio.  It has
+implementations on most native  application frameworks, and at the onset of the
+project, seemed to provide a silver bullet for much of the interface across
+multiple devices.  During the implementation cycle of this project, we found
+that OpenAL provided exciting abstractions, but distance was provided by volume
+ampli-tude attenuation and not properly calculated with a delay.
+
+Creating a native desktop, iOS and android application us-ing OpenAL was
+relatively quick, but upon evaluation by  human subjects, it became apparent
+that the framework was too limiting.  By using volume to place the sound, the
+user was left with jarring edge conditions as the sound image crossed planes of
+reference.  Figure 3 represents pathways tested on users, where each line
+represents a sound traversal pattern relative to the user centered at the
+origin. Because OpenAL uses volume based attenuation and not delays in sound
+queuing, items were perceived to be travelling along a single flattened left-to-
+right (x-axis) plane.
+
+Despite the flattening perception of the library, it was a great tool to test
+some of the concepts on both mobile and desktop environments to initially
+understand if such a framework was feasible and useful.  With OpenAL, a
+framework is provided that allows for audio streams to be created and played in
+real-time (this is contrary to what can currently be done on the web, as HTML
+requires that the audio to be played already exist).\\
+
+
+\textbf{HTML5} For the web, we were able to utilize a new audio tag introduced
+by the web standard community.  The new HTML5 audio tag allowed us to modify
+the JavaScript on web pag-es to generate the necessary transforms and delays to
+place the sound in a 3D environment.  Using the library Three.js we were also
+able to create the necessary callback scripts to perform the transformations as
+well.
+
+The framework we present here, allows an individual to occupy a space and
+interact with the surroundings.  The browser is able to perform the necessary
+transformations and displace the audio around the user.

@@ -1,0 +1,53 @@
+\begin{thebibliography}{1}
+
+\bibitem{blauert1997spatial}
+Jens Blauert.
+\newblock {\em Spatial hearing: the psychophysics of human sound localization}.
+\newblock The MIT press, 1997.
+
+\bibitem{cutrell2001notification}
+Edward Cutrell, Mary Czerwinski, and Eric Horvitz.
+\newblock Notification, disruption, and memory: Effects of messaging
+  interruptions on memory and performance.
+\newblock 2001.
+
+\bibitem{leetiernan2001effective}
+Scott LeeTiernan, Edward Cutrell, Mary Czerwinski, and Hunter Hoffman.
+\newblock Effective notification systems depend on user trust.
+\newblock In {\em Proceedings of Human-Computer Interaction--Interact}, 2001.
+
+\bibitem{maltz2000cue}
+Masha Maltz and Joachim Meyer.
+\newblock Cue utilization in a visually demanding task.
+\newblock In {\em Proceedings of the Human Factors and Ergonomics Society
+  Annual Meeting}, volume~44, pages 283--283. SAGE Publications, 2000.
+
+\bibitem{McCrickard2003509}
+D.Scott McCrickard, Mary Czerwinski, and Lyn Bartram.
+\newblock Introduction: design and evaluation of notification user interfaces.
+\newblock {\em International Journal of Human-Computer Studies}, 58(5):509 --
+  514, 2003.
+\newblock <ce:title>Notification User Interfaces</ce:title>.
+
+\bibitem{schroeder1970digital}
+Manfred~R Schroeder.
+\newblock Digital simulation of sound transmission in reverberant spaces.
+\newblock {\em The Journal of the Acoustical Society of America}, 47:424, 1970.
+
+\bibitem{schroeder1963computer}
+MR~Schroeder and BS~Atal.
+\newblock Computer simulation of sound transmission in rooms.
+\newblock {\em Proceedings of the IEEE}, 51(3):536--537, 1963.
+
+\bibitem{song2010personal}
+Myung-Suk Song, Cha Zhang, Dinei Florencio, and Hong-Goo Kang.
+\newblock Personal 3d audio system with loudspeakers.
+\newblock In {\em Multimedia and Expo (ICME), 2010 IEEE International
+  Conference on}, pages 1600--1605. IEEE, 2010.
+
+\bibitem{yost1987directional}
+William~A Yost and George Gourevitch.
+\newblock {\em Directional hearing}.
+\newblock springer-Verlag New York, 1987.
+
+\end{thebibliography}

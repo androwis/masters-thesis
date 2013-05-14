@@ -1,0 +1,149 @@
+% -----------------------------------------------------------------------------
+%                                 Our Approach
+% -----------------------------------------------------------------------------
+
+\newpage                                                 \chapter{Our Approach}
+
+TOWARDS AN UBIQUITOUS BINAURAL AUDIO INTERFACE
+
+
+\begin{figure}[htbp2]
+  \begin{minipage}[b]{.45\linewidth}
+    \centering
+  \includegraphics[width=1\linewidth]{images/irys_screenshot.jpg}
+    \caption{   \small
+ Sample rendition of sound images in 3D space}
+    \label{fig:irys}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.45\linewidth}
+    \centering
+  \includegraphics[width=1\linewidth]{images/irys_pathways.jpg}
+    \caption{  \small Sample sound paths tested}
+    \label{fig:irys_paths}
+  \end{minipage}
+\end{figure}
+
+Irys is an audible interface designed for use primarily on the web on devices
+that can produce sound through headphones. The interface places sound images
+around the user, providing them with a 3D sound environment allowing users to
+interact with technology when visual attention is either not available or not
+desired.
+
+Conventional binaural or transaural audio systems works well if the listener is
+stationary at the position (usually along the perpendicular bisector of the two
+points of sound) as graphically represented by rendition~\ref{fig:irys}. However,
+once the listener moves away from a sweet spot, system performance degrades
+rapidly (headphones alleviate these problems as the user's location does not
+change relative to a sweet spot).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{images/binaural_diagram.jpg}
+  \caption{Schematic of a binaural audio system}
+  \label{fig:schematic}
+\end{figure}
+
+If a system intends to keep the virtual sound source at the same location, when
+the head moves independent of the sound sources, the binaural synthesizer shall
+update its HRTF matrix to reflect the movement. Figure ~\ref{fig:schematic}
+shows the components of an example binaural system.  B is the binaural engine
+representing the HRTF matrix, C is an acoustic crosstalk canceller used to
+account for room  reverberations, which is what needs to be updated in realtime.
+The updates of B and H were referred as “dynamic binaural synthesis” and
+“dynamic crosstalk canceler”, respectively and are presented in the application
+that allowed the user to move independently of speakers
+~\cite{lentz2006dynamic}.
+
+For this project, we will not concern ourselves with the case that the user is
+moving independent of the audio source and assume that the user is either in a
+stationary environment or has headphones to remove the need for external
+monitoring and real time updating of the audio transformations, but rather this is
+left for future work.
+
+In this paper, we propose to build a personal 3D audio system to draw sound
+images around the user. The virtual environment is depicted in virtual rendition
+found in figure~\ref{fig:irys}. The goal of this project is to create a virtual
+environment that allows sound images to be placed arbitrarily around the user,
+depicting content audibly.  The following sections enumerate the methods and
+project goals for continued research.
+
+
+%----------------------------------------------------------------------------%
+\subsection{                  Analytics                                      }
+
+Before implementing many of the features discussed in this area paper,
+developing an understanding of the ways blind users interact with the web and
+other interfaces would be invaluable to this work.  In that regard, I will carry
+on work started by Jeffrey Bigham in reverse engineering Text-to-Speech so as
+to develop a probabilistic model of where a user listening to a TTS engine is
+located.  The ground work for this project has been completed by training
+machines to recognize speech synthesized from the Macintosh Text-to-Speech
+engines.  There is much work left implement a particle filter so as to allow a
+system to develop a speech tracking mechanism for a given interface. Using
+particle filters as simulation-based probabilistic approximations for tracking
+has been proven effective in the robotics domain~\cite{hightower2004particle}
+and we hope this technique informs much of the work that will be performed in
+the future interface design.
+
+
+%----------------------------------------------------------------------------%
+\subsection{                  Notifications                                  }
+
+The essence of any event or update to user data is condensed into a
+notification.  Current research has explored how notification systems attempt to
+deliver current, important information to computer screens.  Previous works have
+also explored the costs, benefits, and optimal displays of these notifications
+from psychological perspectives that overlap with our ability to handle
+interruptions and distractions~\cite{McCrickard2003509,
+cutrell2001notification}. In this regard, Irys will empirically test the value
+of choosing different types of notifications and the presentation of the
+notifications to the user.
+
+
+\subsection{                  Current Results and Frameworks                  }
+
+Currently, a prototype of this system has been developed.  The existing work
+has explored four physical interfaces : native desktop applications, Android
+handhelds, iOS handhelds, and the web. Each medium provides different drawbacks
+and benefits for the interface being built.\\
+
+\textbf{OpenAL} is a cross-platform open sourced library that provides
+efficient rendering of multichannel three-dimensional positional audio.  It has
+implementations on most native  application frameworks, and at the onset of the
+project, seemed to provide a silver bullet for much of the interface across
+multiple devices.  During the implementation cycle of this project, I found
+that OpenAL provided exciting abstractions, but distance was only provided by
+volume amplitude attenuation and not properly calculated with a delay.
+
+Creating a native desktop, iOS and android application using OpenAL was quick,
+but upon evaluation by  human subjects, it became apparent that the framework
+was too limiting.  By using volume to place the sound, the user was left with
+jarring edge conditions as the sound image crossed planes of reference.
+Figure 3 represents pathways tested on users, where each line
+represents a sound traversal pattern relative to the user centered at the
+origin. Because OpenAL uses volume based attenuation and not delays in sound
+queuing, items were perceived to be traveling along a single flattened left-to-
+right (x-axis) plane.
+
+Despite the flattening perception of the library, it was a great tool to test
+some of the concepts on both mobile and desktop environments to initially
+understand if such a framework was feasible and useful.  With OpenAL, a
+framework is provided that allows for audio streams to be created and played in
+real-time (this is contrary to what can currently be done on the web, as HTML
+requires that the audio to be played already exist).\\
+
+
+\textbf{HTML5} For the web, we were able to utilize a new audio tag introduced
+by the web standard community.  The new HTML5 audio tag allowed us to modify the
+JavaScript on web pages to generate the necessary transforms and delays to
+place the sound in a 3D environment.  Using the library Three.js we were also
+able to create the necessary callback scripts to perform the transformations as
+well.
+
+The framework we present here, allows an individual to occupy a space and
+interact with the surroundings.  The browser is able to perform the necessary
+transformations and displace the audio around the user in real time. It is the
+platform of choice as it is available across all devices and currently only
+relies on the availability of an HTML5 compliant browser and a device that
+can produce stereo sound.

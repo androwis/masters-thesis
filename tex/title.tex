@@ -1,0 +1,112 @@
+% -----------------------------------------------------------------------------
+%                                Master's Thesis
+%                               androwis abumoussa
+% -----------------------------------------------------------------------------
+
+
+% -----------------------------------------------------------------------------
+%                                  preamble
+% -----------------------------------------------------------------------------
+\documentclass[12pt]{report}
+\usepackage{microtype}
+\usepackage{cite}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    linktoc=all
+}
+\setlength\parindent{0pt}
+
+
+% -----------------------------------------------------------------------------
+%                                custom macros
+% -----------------------------------------------------------------------------
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% Remove the ugly ass chapter numbers
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{-10\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    %\ifnum \c@secnumdepth >\m@ne
+    %    \huge\bfseries \@chapapp\space \thechapter
+    %    \par\nobreak
+    %    \vskip 20\p@
+    %\fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 10\p@
+  }}
+  \makeatother
+
+
+
+% -----------------------------------------------------------------------------
+%                                 Title Page
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+
+% Upper part of the page. The '~' is needed because \\
+% only works if a paragraph has started.
+\textsc{\LARGE The University of Rochester}
+\\[5.5cm]
+
+\textsc{\Large Area Paper}\\
+for the Degree Master of Science
+\\[0.5cm]
+
+% Title
+\HRule \\[0.4cm]
+{ \large \bfseries Binaural Audio as a User Interface }\\[0.4cm]
+
+\HRule \\[0.5cm]
+
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Androwis \textsc{Abumoussa}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+Dr.~Jeffrey \textsc{Bigham}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large \today}
+
+\end{center}
+\end{titlepage}
+
+
+
+% -----------------------------------------------------------------------------
+%                               Table of Contents
+% -----------------------------------------------------------------------------
+\renewcommand{\thepage }{\roman{page}}                         \tableofcontents
+
+
+
+% -----------------------------------------------------------------------------
+%                               Stylistic Blank Page
+% -----------------------------------------------------------------------------
+\newpage \thispagestyle{empty} \quad

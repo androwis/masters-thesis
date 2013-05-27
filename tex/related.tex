@@ -58,33 +58,33 @@ difficulty when creating this interface.
 \section{                 Assistive Audio Interfaces                           }
 % 2) audio used to assist user's comprehension      ~\cite{jeon2012listen2droom}
 
-Work by researchers at Georgia Tech demonstrated the use of a single, radial axis 
+Work by researchers at Georgia Tech demonstrated the use of a single, radial axis
 in an audio interface to present information to blind individuals. They presented
 multiple user studies and work of assisting blind users navigate new or unfamiliar
-rooms.  With smart phones and computer vision techniques the researchers in 
-Bruce Walker's Sonification lab created an application helping blind users understand 
-the orientation and placement of objects in new environments. Of note are the 
+rooms.  With smart phones and computer vision techniques the researchers in
+Bruce Walker's Sonification lab created an application helping blind users understand
+the orientation and placement of objects in new environments. Of note are the
 current practices that blind users employ to navigate these settings. The focus group
-Jeon et al. interviewed demonstrated that blind users employ 
-various strategies to place objects in a room such as one subjects summarization 
-that by "listening to the room, we can detect where running refrigerators, 
-computers, or other machinery exists" ~\cite{jeon2012listen2droom}. The second 
+Jeon et al. interviewed demonstrated that blind users employ
+various strategies to place objects in a room such as one subjects summarization
+that by "listening to the room, we can detect where running refrigerators,
+computers, or other machinery exists" ~\cite{jeon2012listen2droom}. The second
 most common response was that layout is also often inferred by touch, or assisted
-navigation either with the use of inanimate objects (such as walking canes) 
-or sighted volunteers. 
+navigation either with the use of inanimate objects (such as walking canes)
+or sighted volunteers.
 
-The smart phone application presented in this work allows visually handicapped 
-individuals to scan a room by holding an external camera connected to the phone, 
+The smart phone application presented in this work allows visually handicapped
+individuals to scan a room by holding an external camera connected to the phone,
 or a phone's native camera left to right across the room. The application then
-provides the user with 3 modes of information retrieval after video processing 
+provides the user with 3 modes of information retrieval after video processing
 has been performed to identify the objects and their locations in the environment.
 
 1) Linear Searching : allows the interface to communicate which objects are
 present in a room and the order in which they were observed.  The authors found
-that this mode allowed users to quickly "scan" a setting and identify whether an 
-object of interest existed in the space. 
+that this mode allowed users to quickly "scan" a setting and identify whether an
+object of interest existed in the space.
 
-2) Directional Retrieval: provides the users of the interface with information 
+2) Directional Retrieval: provides the users of the interface with information
 on objects by grouping related objects and returning their location with respect
 to room walls and room center.
 
@@ -92,17 +92,17 @@ to room walls and room center.
 the use of binaural audio when the user is wearing a headset. This allows the user
 to understand where objects are in relation to their current orientation.
 
-Additionally, the lab has explored optimizations for auditory interfaces. The 
+Additionally, the lab has explored optimizations for auditory interfaces. The
 lab demonstrated how the use of spearcons (injections of compressed speech ~\cite{
 jeon2009enhanced} that allows the sound to act as a cue within a given context)
 can be used to enhance menu navigation on mobile devices ~\cite{
-walker2009spearcon}. This work extends previous findings that auditory menus 
+walker2009spearcon}. This work extends previous findings that auditory menus
 that rely solely on TTS vocalizations of the text prove to be much less efficient
 than menus that employ spearcons which allow the user to navigate based on injections
-and rely on the full speech for context.  This work demonstrates how new constructs 
+and rely on the full speech for context.  This work demonstrates how new constructs
 for navigation can be learned by users, and then used to optimize the navigation
 of auditory menus.  Using a Nokia phone with 50 contacts with randomized names,
-Walker et al. studied how 89 undergraduates navigated to a target user using 
+Walker et al. studied how 89 undergraduates navigated to a target user using
 the visual display only, visual display with TTS, visual display with spearcon,
 visuals off with TTS, and then TTS with spearcons. The results show that conditions
 with visual cues led to the fastest responses.  Once visuals are disabled, spearcons
@@ -192,16 +192,16 @@ University of Glasgow noted the ergonomics and usability of different tactile
 interfaces when coupled with a 3D audio soundscape.  Their work demonstrated
 how several interaction patterns (from gestural on mobile devices, to physical
 motions such as head nodding) might work with a given soundscape measuring the
-tactile interfaces accuracy and effectiveness.  The researchers demonstrated 
+tactile interfaces accuracy and effectiveness.  The researchers demonstrated
 some of the difficulties encountered when working with audio as an interface,
-citing the ambiguity of 'exact locations' in space when asking subjects to 
+citing the ambiguity of 'exact locations' in space when asking subjects to
 locate a sound.  They observed that some of these ambiguities arose from blur
 introduced by non-calibrated HRTFs.  Of note are the design choices Marentakis
 et al. made when integrating sound and visual displays that allowed for feedback
-to the user when guiding the user to interact with a specific sound source.  
-They concluded that a 3D soundscape
-was effective with all of the tested interfaces and could be used as for
-flexible, eyes free interaction with a computer\cite{marentakis2004study}.
+to the user when guiding the user to interact with a specific sound source.
+They concluded that a 3D soundscape was effective with all of the tested 
+interfaces and could be used as for flexible, eyes free interaction with a 
+computer\cite{marentakis2004study}.
 
 
 
@@ -209,7 +209,7 @@ flexible, eyes free interaction with a computer\cite{marentakis2004study}.
 %                                   Notifications
 % notification reliability --> users to ignore  ~\cite{leetiernan2001effective}
 % notifications : informative                              ~\cite{maltz2000cue}
-% notifications : interpretted                    ~\cite{horvitz1999principles}
+% notifications : interpreted                    ~\cite{horvitz1999principles}
 % notification systems' users                   ~\cite{cutrell2001notification}
 %-----------------------------------------------------------------------------%
 
@@ -241,15 +241,23 @@ guidelines found in~\cite{reeves2004guidelines}.
 
 \section{                  Psychology of Interface Design                    }
 
-The interplay of ergonomics and psychology are known facets of HCI. As such, 
-the design of novel interfaces are encouraged to either increase efficiency or 
-user satisfaction (preferably both). To more concretely enumerate the goals, 
-the literature provides a number of guiding examples.  Exploring a number of 
-different goal oriented tasks, general patterns of interactions emerge that 
-suggest a conversational metaphor would be an appropriate interface design 
-choice because the user could leverage existing biological mechanisms to 
-understand the interface and that the existing conversational mental model 
-directly supports direct and simple inference of what information this 
+User interface design explores how systems can mediate effective operation.
+Before you can begin looking at the effectiveness of a particular operation or
+efficiency measure for a specific interface, metrics have to be established for
+the desired or given task. One goal for future work may be to increase the
+ability for a blind or visually disabled user to multi task in a given computing
+environment.  In our work though, we are exploring how the use of 3D audio
+interfaces can be used to provide a new kind of interaction for users 
+
+The interplay of ergonomics and psychology are known facets of the field. As 
+such,the design of novel interfaces are encouraged to either increase 
+efficiency or user satisfaction (preferably both). To more concretely enumerate
+the goals, the literature provides a number of guiding examples.  Exploring a
+number of different goal oriented tasks, general patterns of interactions emerge
+that suggest a conversational metaphor would be an appropriate interface design
+choice because the user could leverage existing biological mechanisms to
+understand the interface and that the existing conversational mental model
+directly supports direct and simple inference of what information this
 interface is presenting~\cite{kieras1984role}.
 
 \subsection{                  Mental Models and Cognitive Loads              }
@@ -258,7 +266,7 @@ A limitation of most interfaces is simply the size and volatility of a user's
 short term memory.  To make real time captioning easier for untrained works
 Lasecki et al. demonstrated how time could be warped for any given users task.
 Warping the playback speed of previously recorded audio enabled users to perform
-the captioning task more efficiently by reducing the high cognitive load needed 
+the captioning task more efficiently by reducing the high cognitive load needed
 for captioning ~\cite{lasecki2013warping}.
 
 Simplifying information is not only beneficial for goal oriented and task driven
@@ -282,23 +290,23 @@ effects of a user's mental model soundness~\cite{kulesza2012tell}.
 
 \subsection{                   Mental Model Elasticity                       }
 
-Since Irys is an exploration of a new interaction technique, it's important to
+Since this paper is an exploration of a new interaction technique, it's important to
 consider user's ability to learn how the system works. Work in HCI explores how
 well users are at creating new mental models for interactions as evidenced by
 shifting paradigms of technology hardware (changing from numeric keypads, to
 stylus, to keyboard, to touchscreen).  Work from the Universitite Paris Sud
 explored how well users could remap existing mental models by exploring how
 users adapt to interaction techniques that use the temporal dimension versus
-more advanced uses of rhythmic patterns to convey information.  The researchers
+more advanced uses of rhythmic patterns to convey information 
+~\cite{ghomi2012using}.  The researchers
 explored how rhythmic techniques, though a deviation from  user expectation of
 temporal interactions (such as multiple clicks), can be particularly useful in
 situations where the visual channel is overloaded or even not available.  They
 concluded that  (i) rhythmic patterns can be efficiently reproduced by novice
 users and recognized by computer algorithms, and (ii) rhythmic patterns can be
-memorized as efficiently as traditional shortcuts when associating them with
-visual command~\cite{ghomi2012using}.  This work suggests that deviations from
-common interaction patterns can be beneficial to users when training is
-provided.
+memorized as efficiently as traditional shortcuts when associating them with 
+visual commands~\cite{ghomi2012using}.  This work suggests that deviations from
+common interaction patterns can be beneficial to users when training is provided.
 
 \section{                  Interface Elements                                }
 
@@ -316,9 +324,9 @@ interfaces could adapt to noisy data, such as uncertainty about times referring
 to an event that needs to be scheduled in an email. The influence LookOut has on
 modern interfaces can be seen with many common email clients such as Google's
 Gmail and Microsoft's Outlook performing similar mixed-initiative actions.  In
-relation to Irys, the system will have to learn how to notify users of changes
-by evaluating the costs and benefits associated with interruptions at different
-times.
+relation to our work, a binaural system with intelligent agent powered notifications
+will have to learn how to notify users of changes by evaluating the costs and 
+benefits associated with interruptions at different times.
 
 \subsection{                  Visual Notifications                           }
 

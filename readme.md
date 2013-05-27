@@ -1,6 +1,8 @@
 Latex is annoying.  To fix it, see what horrors I had to perform in the
-Makefile.  To compile this (assuming you have pdflatex on your system):
+Makefile.  
+
+To compile this:
 
     $ make
 
-Then look at the pdf.  It should be somewhat pretty.
+The pdf should pop out.  It should be somewhat pretty.

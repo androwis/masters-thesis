@@ -1,5 +1,5 @@
 Latex is annoying.  To fix it, see what horrors I had to perform in the
-Makefile.  To compile this (assuming you have pdf latex on your system):
+Makefile.  To compile this (assuming you have pdflatex on your system):
 
     $ make
 

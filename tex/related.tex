@@ -8,10 +8,19 @@ of both binaural audio and intelligent agents. By exploring prior work in this
 space, we begin to observe the benefits arising from the interplay of these
 components which will be explored in future work.
 
-%----------------------------------------------------------------------------%
-\section{                  Audio Only Interfaces                             }
+%-----------------------------------------------------------------------------%
+%                                   Audio
+% 1) audio is THE primary element of interface     ~\cite{arons1991hyperspeech}
+% 2) audio used to assist user's comprehension         ~\cite{se19993dAudio}
+% 3) binaural audio used for HTML presentation         ~\cite{goose19993dAudio}
+% 4) binaural audio + other modals     ~\cite{yu2006novel, marentakis2004study}
 
-MIT's media lab has explored the area of "hyperspeech", a corollary to
+
+%-----------------------------------------------------------------------------%
+\section{                  Audio Only Interfaces                             }
+% 1) audio is THE primary element of interface     ~\cite{arons1991hyperspeech}
+
+MIT's Media Lab has explored the area of "hyperspeech", a corollary to
 hypertext where the paradigm is presenting speech as data.  The goal of the
 work was to understand the nuances necessary to both extract information from
 audio while also accessing it through speech~\cite{arons1991hyperspeech}.
@@ -29,7 +38,7 @@ and here has  disappeared"~\cite{arons1991hyperspeech}.
 To introduce hyperspeech, or the use of sound as data, Arons conducted interviews
 with a number of leading interface design specialists.  The interviews were
 brief in nature, completed in approximately 5 minutes.  The speech recorded
-from the interview was then processed offline and put into a data base.
+from the interview was then processed off line and put into a data base.
 Labels and connections were created between associated statements, creating a
 graph of the topics discussed.  What was studied was the interface with which
 hyperspeech could be used.  The goal of the interface was to answer questions
@@ -38,16 +47,73 @@ A's stance on B?".  Navigation between different topics or through specific
 interfaces were studied.
 
 By exploring how the design can influence a user's ability to navigate through
-the information of a databese, it was demonstrated that it is important to
+the information of a database, it was demonstrated that it is important to
 be able to navigate in any direction arbitrarily from any node. Having all of
 the commands available while navigating was the most natural presentation of
 an interface.  One benefit of using speech as an input modality is that it is
 goal directed and very succinct.  Complexity and variability proved to be a
 difficulty when creating this interface.
 
+%%-----------------------------------------------------------------------------%
+\section{                 Assistive Audio Interfaces                           }
+% 2) audio used to assist user's comprehension      ~\cite{jeon2012listen2droom}
 
-%----------------------------------------------------------------------------%
-\section{                  Binaural Interfaces                               }
+Work by researchers at Georgia Tech demonstrated the use of a single, radial axis 
+in an audio interface to present information to blind individuals. They presented
+multiple user studies and work of assisting blind users navigate new or unfamiliar
+rooms.  With smart phones and computer vision techniques the researchers in 
+Bruce Walker's Sonification lab created an application helping blind users understand 
+the orientation and placement of objects in new environments. Of note are the 
+current practices that blind users employ to navigate these settings. The focus group
+Jeon et al. interviewed demonstrated that blind users employ 
+various strategies to place objects in a room such as one subjects summarization 
+that by "listening to the room, we can detect where running refrigerators, 
+computers, or other machinery exists" ~\cite{jeon2012listen2droom}. The second 
+most common response was that layout is also often inferred by touch, or assisted
+navigation either with the use of inanimate objects (such as walking canes) 
+or sighted volunteers. 
+
+The smart phone application presented in this work allows visually handicapped 
+individuals to scan a room by holding an external camera connected to the phone, 
+or a phone's native camera left to right across the room. The application then
+provides the user with 3 modes of information retrieval after video processing 
+has been performed to identify the objects and their locations in the environment.
+
+1) Linear Searching : allows the interface to communicate which objects are
+present in a room and the order in which they were observed.  The authors found
+that this mode allowed users to quickly "scan" a setting and identify whether an 
+object of interest existed in the space. 
+
+2) Directional Retrieval: provides the users of the interface with information 
+on objects by grouping related objects and returning their location with respect
+to room walls and room center.
+
+3) Spatially, using 3D audio, the app vocalizes the position of an object through
+the use of binaural audio when the user is wearing a headset. This allows the user
+to understand where objects are in relation to their current orientation.
+
+Additionally, the lab has explored optimizations for auditory interfaces. The 
+lab demonstrated how the use of spearcons (injections of compressed speech ~\cite{
+jeon2009enhanced} that allows the sound to act as a cue within a given context)
+can be used to enhance menu navigation on mobile devices ~\cite{
+walker2009spearcon}. This work extends previous findings that auditory menus 
+that rely solely on TTS vocalizations of the text prove to be much less efficient
+than menus that employ spearcons which allow the user to navigate based on injections
+and rely on the full speech for context.  This work demonstrates how new constructs 
+for navigation can be learned by users, and then used to optimize the navigation
+of auditory menus.  Using a Nokia phone with 50 contacts with randomized names,
+Walker et al. studied how 89 undergraduates navigated to a target user using 
+the visual display only, visual display with TTS, visual display with spearcon,
+visuals off with TTS, and then TTS with spearcons. The results show that conditions
+with visual cues led to the fastest responses.  Once visuals are disabled, spearcons
+helped drive performance to the lower limits, while TTS solution initially afforded
+faster initial performance.  With the same amount of practice, spearcons outperformed
+TTS engines due to their compressed nature.  This work demonstrates some of the
+possible optimizations that can be built in to auditory interfaces.
+
+%-----------------------------------------------------------------------------%
+\section{                  Binaural Interfaces                                }
+% 3) binaural audio used for HTML presentation         ~\cite{goose19993dAudio}
 
 Researchers at Siemens Corporate Labs demonstrated the comprehensive benefits
 of delivering HTML content to users with a binaural interface.  They created
@@ -115,18 +181,38 @@ overall orientation within multiple pages.  The authors argue that these
 factors can improve the effectiveness of the browsing experience for its
 users~\cite{goose19993dAudio}.
 
+
+%-----------------------------------------------------------------------------%
+\section{                  Binaural Audio Interfaces with other Modals        }
+% 4) binaural audio + other modals     ~\cite{yu2006novel, marentakis2004study}
+
 The viability of this work is exciting when considering how binaural audio
 can be used in conjunction with other interfaces.  Research from the
 University of Glasgow noted the ergonomics and usability of different tactile
 interfaces when coupled with a 3D audio soundscape.  Their work demonstrated
 how several interaction patterns (from gestural on mobile devices, to physical
 motions such as head nodding) might work with a given soundscape measuring the
-tactile interfaces accuracy and effectiveness.  They concluded that a 3D soundscape
+tactile interfaces accuracy and effectiveness.  The researchers demonstrated 
+some of the difficulties encountered when working with audio as an interface,
+citing the ambiguity of 'exact locations' in space when asking subjects to 
+locate a sound.  They observed that some of these ambiguities arose from blur
+introduced by non-calibrated HRTFs.  Of note are the design choices Marentakis
+et al. made when integrating sound and visual displays that allowed for feedback
+to the user when guiding the user to interact with a specific sound source.  
+They concluded that a 3D soundscape
 was effective with all of the tested interfaces and could be used as for
 flexible, eyes free interaction with a computer\cite{marentakis2004study}.
 
 
-%----------------------------------------------------------------------------%
+
+%-----------------------------------------------------------------------------%
+%                                   Notifications
+% notification reliability --> users to ignore  ~\cite{leetiernan2001effective}
+% notifications : informative                              ~\cite{maltz2000cue}
+% notifications : interpretted                    ~\cite{horvitz1999principles}
+% notification systems' users                   ~\cite{cutrell2001notification}
+%-----------------------------------------------------------------------------%
+
 %----------------------------------------------------------------------------%
 \section{                 HCI : Interface Design                             }
 
@@ -153,30 +239,18 @@ project, though geared towards users with visual disabilities, adheres to
 the mantra of maximizing human cognitive and physical abilities using the
 guidelines found in~\cite{reeves2004guidelines}.
 
-
-%----------------------------------------------------------------------------%
 \section{                  Psychology of Interface Design                    }
 
-User interface design explores how systems can mediate effective operation.
-Before you can begin looking at the effectiveness of a particular operation or
-efficiency for a specific interface, metrics have to be established for the
-desired or given task. The goal of our future work is to increase the ability
-for blind or visually disabled users to multi task in a given computing
-environment.
-
-The interplay of ergonomics and psychology are known facets of the field. As
-such, the design of novel interfaces are encouraged to either increase
-efficiency or user satisfaction (preferably both). To more concretely enumerate
-the goals, the literature provides a number of guiding examples.  Exploring a
-number of different goal oriented tasks, general patterns of interactions
-emerge that suggest a conversational metaphor would be an appropriate
-interface design choice because the user could leverage existing biological
-mechanisms to understand the interface and that the existing conversational
-mental model directly supports direct and simple inference of what information
-this interface is presenting~\cite{kieras1984role}.
-
-
-
+The interplay of ergonomics and psychology are known facets of HCI. As such, 
+the design of novel interfaces are encouraged to either increase efficiency or 
+user satisfaction (preferably both). To more concretely enumerate the goals, 
+the literature provides a number of guiding examples.  Exploring a number of 
+different goal oriented tasks, general patterns of interactions emerge that 
+suggest a conversational metaphor would be an appropriate interface design 
+choice because the user could leverage existing biological mechanisms to 
+understand the interface and that the existing conversational mental model 
+directly supports direct and simple inference of what information this 
+interface is presenting~\cite{kieras1984role}.
 
 \subsection{                  Mental Models and Cognitive Loads              }
 
@@ -184,8 +258,8 @@ A limitation of most interfaces is simply the size and volatility of a user's
 short term memory.  To make real time captioning easier for untrained works
 Lasecki et al. demonstrated how time could be warped for any given users task.
 Warping the playback speed of previously recorded audio enabled users to perform
-the captioning task by reducing the high cognitive load needed for captioning
-~\cite{lasecki2013warping}.
+the captioning task more efficiently by reducing the high cognitive load needed 
+for captioning ~\cite{lasecki2013warping}.
 
 Simplifying information is not only beneficial for goal oriented and task driven
 processes, but they are also empirically preferred by users of a number of
@@ -205,8 +279,6 @@ are available to the user when acting on a notification.  Prior work has
 explored how an intelligent agent can explain itself to the user, the amount
 varying degrees by which an intelligent agent can reconfigure itself, and the
 effects of a user's mental model soundness~\cite{kulesza2012tell}.
-
-
 
 \subsection{                   Mental Model Elasticity                       }
 
@@ -228,7 +300,6 @@ visual command~\cite{ghomi2012using}.  This work suggests that deviations from
 common interaction patterns can be beneficial to users when training is
 provided.
 
-%----------------------------------------------------------------------------%
 \section{                  Interface Elements                                }
 
 Eric Horvitz depicted the divide in research focusing on the promise of creating
@@ -248,8 +319,6 @@ Gmail and Microsoft's Outlook performing similar mixed-initiative actions.  In
 relation to Irys, the system will have to learn how to notify users of changes
 by evaluating the costs and benefits associated with interruptions at different
 times.
-
-
 
 \subsection{                  Visual Notifications                           }
 
@@ -280,9 +349,6 @@ Researchers found that notifications occurring at the beginning of a task are
 more likely to completely derail focus while those occurring near the completion
 of tasks have mitigated effects.
 
-
-
-%----------------------------------------------------------------------------%
 \section{                  Tactile Notifications                             }
 
 When exploring non-visual interfaces, it is important to consider how the human
@@ -308,11 +374,6 @@ operator has over the slave device.  What is important with haptic feedback is
 that notifications have to be performed in real-time or else stale information
 propagates into large control errors~\cite{ellis1996design}.
 
-
-
-
-
-%----------------------------------------------------------------------------%
 \section{                  Auditory Notifications                            }
 
 SOCIAL ISSUES: In their paper Hanson et al. discussed the interplay of social

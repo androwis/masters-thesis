@@ -4,76 +4,87 @@
 \newpage                                                  \chapter{Future Work}
 
 3D audio interfaces present a number of exciting capabilities in human computer
-interaction. With an initially completed framework and literature review, some 
-possible immediate short-term goals for this project are to perform user studies
-and performance measures on the efficacy of this type of interface as it relates
-to specific tasks.
+interaction. With an initially completed framework and literature review, the
+suggested short-term goals for this project are to perform user studies and
+performance measures on the efficacy of this type of interface as it relates to
+specific tasks.
 
-There are two targeted user bases for this interface, members of the blind or low
-vision community, and non-disabled users performing other tasks that monopolize 
-their vision (such as driving or walking). The first evaluation goals are to 
-perform more in-depth studies of how this interface can be used to best enable 
-these users to interact with a given interface through multi-tasking techniques 
-as afforded by the 3D placement of independent sound objects.
+Because there are two targeted user bases for this interface, the empirical
+measures are inherently different. The first group consists of members of the
+blind or low vision community, and the other is comprised of non-disabled users
+performing other tasks that monopolize their vision (such as driving or
+walking).
+
+The first set of evaluation goals are to perform more in-depth studies of
+how this interface can be used to best enable each group of users to interact
+with a given interface through multi-tasking techniques as afforded by the 3D
+placement of independent sound objects.
 
 %-----------------------------------------------------------------------------%
-\section{                  Empirical Measure of Efficiency                    }
+\section{                 Empirical Measure of Efficiency                    }
 
 Having multiple sources of audio may be distracting for a user, so evaluation on
 the number of voices a user can focus on, what types of information are best
-presented to the user, and the optimal time locality of notifications are all 
+presented to the user, and the optimal time locality of notifications are all
 metrics of interest for this interface. Search and navigation within this type
-of interface becomes an interesting research topic.  How can a user query 
-information audibly. Systems, such as Apple’s Siri and Google Voice attempt 
+of interface becomes an interesting research topic. How can a user query
+information audibly. Systems, such as Apple’s Siri and Google Voice attempt
 to provide an interface for general query and answer interactions, but how can
 a system be built to allow for in-depth querying of content in a spatial manner?
-Should context be provided to search or should the system only search the 
+Should context be provided to search or should the system only search the
 locality around the user?
 
-Human computer interaction has very well established guidelines and methods for
-evaluating graphic interfaces. There are over 13 commonly accepted design
-principles encompassing many facets of visual perception and information
-processing~\cite{wickens2004intro}. Expanding on this research in
-the auditory domain with empirical studies on user satisfaction using these
-measures is the first step in understanding the potential for 3D interfaces.
+Formally, we are interested in three aspects of binaural interfaces which can be
+used to quantify their efficiency for the target users.
 
 %-----------------------------------------------------------------------------%
 \subsection{                  Proposed Next Steps                             }
 
-Most importantly, the next major focus will be on quantifying the benefits of
+Most importantly, the next major focus should be on quantifying the benefits of
 this type of interface. Metrics on goal completion on tasks in a 3D space as
 compared to regular interfaces as well as throughput as measured by multi-task
 capacity would assist in understanding the efficacy of this system. Finally,
-we’re very excited to explore the ability of 3D audio in helping users remember
-information by providing a tangible dimension to their information processing.
+researching the ability of 3D audio to help users remember information by
+providing a tangible dimension to their information processing can lead to
+insights on the benefits these types of systems can have for their user bases.
 
-%-----------------------------------------------------------------------------%
-\subsection{                  Artificial Intelligence Domain                  }
+The most important question we pose looks at the ability of these interfaces to
+reduce the users cognitive load. We describe auditory interfaces whose
+conceptual model maps interface elements into a 3D audio space. The hypothesis
+is that the extra dimension in the audio can reduce the users cognitive load. As
+binaural interfaces are built, one goal is to explore the features that allow
+audio and directionality to reduce the cognitive load for the user. As these 3D
+interfaces provide information to the user in terms of spatial attenuation and
+audio feedback, we can begin to explore the added benefits these new features
+have on improving both the users comprehension of content presented to them and
+their efficiency with interacting with the systems as they provide users with
+cues to assist recall of information.
 
-Before exploring the contributions of such an interface to the field of human
-and computer interaction, there are a number of technical implementations that
-would contribute to artificial intelligence.  Prior literature has
-demonstrated that if acute attenuations are mis-calibrated in a user's head
-related transfer function, then the auditory experience degrades sharply
-~\cite{algazi2001cipic}.  One contribution to this domain would be a systemic
-learning procedure that is able to model the parameters needed for an
-individual's head related transfer function.  The CIPIC HRTF database provides
-high resolution anthropometric measurements and will act as a strong source of
-data for the parameter tuning for such a classifier.  Manual techniques for
-calibrating HRTF were presented by researchers from Creative Audio and would
-provide a great stepping stone for this ~\cite{jost2000transaural}.
+We then shift our focus to the role of audio in interface design. Because of
+sound's transient properties, its ability to portray or navigate through
+interfaces elements changes. More importantly, audible interfaces provide an
+alternate mode of access to computers whenever a users’ visual focus is
+unavailable. Visual focus can be unavailable for a number of reasons, such as
+when users are driving, using hand-held devices while engaged in other physical
+activities that command visual attention, or even as a result of physical
+disabilities~\cite{ michelis2008disappearing}. We are interested in
+understanding how a user's interaction with sound can quantitatively be used to
+more efficiently accomplish tasks in different scenarios.
 
+Coupling 3D audio interfaces with intelligent agents driving notifications
+presents the next question. Future work should quantify the efficiency
+different types of intelligent agent models have when coupled with auditory
+interfaces as measured by a user's ability to multi-task, context switch,
+navigate through their content.
 
-%-----------------------------------------------------------------------------%
-\subsection{                  Crowd Sourced Domain                               }
-
-Crowd sourced work has proven to be an effective medium for solving hard AI
-problems, computer vision and other computationally ambiguous problems.  With a
-binaural interface, a new control mechanism could be created that would allow
-other users to provide navigational cues where a full audible stream may not
-be beneficial.  Examples that demonstrate how to utilize audio as a control have
-been the dropping of digital soundtracks in the augmented reality space.  Other
-uses for this could be orchestrated guidance or remote control of a user to a
-location (such as navigating a blind user to a bathroom in a mall).  Another
-application could be providing more natural instruction to web workers through
-the use of sound images that guide workers to complete tasks.
+Finally, we will explore the decision making processes within each scope of
+intelligent agent and audio scheme. With each type of stimuli or notification,
+there is a stochastic decision that must be made regarding both the best manner
+and the proper time to alert the user. Future work can begin to  explore how
+these trade offs present themselves in the auditory domain. Human computer
+interaction has very well established guidelines and methods for evaluating
+graphic interfaces. There are over 13 commonly accepted design principles
+encompassing many facets of visual perception and information
+processing~\cite{wickens2004intro}. Expanding on this research in the auditory
+domain with empirical studies on user satisfaction using these measures is the
+first step in understanding the potential for 3D interfaces.

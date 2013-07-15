@@ -1,11 +1,8 @@
 % -----------------------------------------------------------------------------
-%                                 Our Approach
+%                                 Research Directions
 % -----------------------------------------------------------------------------
 
-\newpage                                                 \chapter{Our Approach}
-
-TOWARDS AN UBIQUITOUS BINAURAL AUDIO INTERFACE
-
+\newpage                                          \chapter{Research Directions}
 
 \begin{figure}[htbp2]
   \begin{minipage}[b]{.45\linewidth}
@@ -24,47 +21,36 @@ TOWARDS AN UBIQUITOUS BINAURAL AUDIO INTERFACE
   \end{minipage}
 \end{figure}
 
-This project explores an audible interface designed for use primarily on the
-web with devices that can produce sound through headphones. The interface we 
-are exploring places sound images around the user, providing them with a 3D
-sound environment allowing them to interact with technology when visual 
-attention is either not available or not desired.
+This project explores previous work which have utilized 3D audio.  This thesis
+hopes to develop a roadmap for future work that might outline future research's
+path to understanding the full potential that a binaural interface might provide. 
+As an interface places sound images around the user, new methods of information 
+portrayal are provided to users as the interface's 3D sound environment allows
+for users to interact with technology when visual attention is either not 
+available or not desired.
 
-Conventional binaural or transaural audio systems work well if the listener is
-stationary at the position (usually along the perpendicular bisector of the two
-points of sound) as graphically represented by rendition~\ref{fig:irys}. However,
-once the listener moves away from a sweet spot, system performance degrades
-rapidly (headphones alleviate these problems as the user's location does not
-change relative to a sweet spot).
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=1\textwidth]{images/binaural_diagram.jpg}
-  \caption{Schematic of a binaural audio system}
-  \label{fig:schematic}
-\end{figure}
-
-If a system intends to keep the virtual sound source at the same location, when
-the head moves independent of the sound sources, the binaural synthesizer should
-update its HRTF matrix to reflect the movement. Figure ~\ref{fig:schematic}
-shows the components of an example binaural system.  B is the binaural engine
-representing the HRTF matrix, C is an acoustic crosstalk canceller that can be used to
-account for room  reverberations, which is what needs to be updated in realtime.
-The updates of B and H were referred as “dynamic binaural synthesis” and
-“dynamic crosstalk canceler”, respectively and are presented in previous work 
-with the application that allowed the user to move independently of speakers
-~\cite{lentz2006dynamic}.
+Before considering the state of prior art, it is important to clarify the technical
+concepts of interest and which ones we plan to avoid. For example, conventional binaural or
+transaural audio systems work well if the listener is stationary at the position
+(usually along the perpendicular bisector of the two points of sound) as 
+graphically represented by rendition~\ref{fig:irys}. However, once the listener
+moves away from the sweet spot, system performance degrades rapidly. There has
+been previous work in addressing the physics of this problem ~\cite{song2010personal}
+but, because headphones alleviate these problems (as the user's location does not
+change relative to a sweet spot), we will simplify our system and not explore those
+types of technical questions.
 
 For this project, we will not concern ourselves with the case that the user is
 moving independent of the audio source and assume that the user is either in a
 stationary environment or has headphones to remove the need for external
 monitoring and real time updating of the audio transformations.
 
-In this paper, we argue that the imlpementation of 3D audio algorithms to create 
-a personal 3D audio interface which draws sound images around the user, as depicted
-the in virtual rendition found in figure~\ref{fig:irys}, can be used to create
-a more efficient interface when vision is not available. By creating a virtual
-environment that allows sound images to be placed arbitrarily around the user,
+This section presents possible points of exploration that can be used to understand
+how 3D audio algorithms can be used to create new types of interfaces and the 
+implications they have on usability. By building interfaces that draw audio images 
+as depicted by the virtual rendition found in figure~\ref{fig:irys}, binaural audio
+may be used to provide a more efficient interface when vision is not available. 
+An environment that allows sound images to be placed arbitrarily around the user,
 content that is depicted audibly can be maniupulated to drive a number of key 
 metrics. In this section, we enumerate the direction of future work and the 
 proposed aspects of exploration.
@@ -131,8 +117,7 @@ some of the concepts on both mobile and desktop environments to initially
 understand if such a framework was feasible and useful.  With OpenAL, a
 framework is provided that allows for audio streams to be created and played in
 real-time (this is contrary to what can currently be done on the web, as HTML
-requires that the audio to be played already exist).\\
-
+requires that the audio to be played already exist).
 
 \textbf{HTML5} For the web, we were able to utilize a new audio tag introduced
 by the web standard community.  The new HTML5 audio tag allowed us to modify the

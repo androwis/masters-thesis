@@ -60,7 +60,7 @@ difficulty when creating this interface.
 
 Work by researchers at Georgia Tech demonstrated the use of a single, radial axis
 in an audio interface to present information to blind individuals. They presented
-multiple user studies and work of assisting blind users navigate new or unfamiliar
+multiple user studies and work of assisting blind users to navigate new or unfamiliar
 rooms.  With smart phones and computer vision techniques the researchers in
 Bruce Walker's Sonification lab created an application helping blind users understand
 the orientation and placement of objects in new environments. Of note are the
@@ -92,6 +92,12 @@ to room walls and room center.
 the use of binaural audio when the user is wearing a headset. This allows the user
 to understand where objects are in relation to their current orientation.
 
+In their work, Jeon et al. focused more on the process of designing this interface,
+what they learned from their participants, and the motivation for much of their
+design choices.  The work did not discuss any experimental observations regarding
+the effect 3D audio had on the target users, instead choosing to leave the 
+exploration of the effects 3D audio would have on its users for future work.
+
 Additionally, the lab has explored optimizations for auditory interfaces. The
 lab demonstrated how the use of spearcons (injections of compressed speech ~\cite{
 jeon2009enhanced} that allows the sound to act as a cue within a given context)
@@ -112,7 +118,7 @@ TTS engines due to their compressed nature.  This work demonstrates some of the
 possible optimizations that can be built in to auditory interfaces.
 
 %-----------------------------------------------------------------------------%
-\section{                  Binaural Interfaces                                }
+\section{                  Binaura1 Interfaces                                }
 % 3) binaural audio used for HTML presentation         ~\cite{goose19993dAudio}
 
 Researchers at Siemens Corporate Labs demonstrated the comprehensive benefits
@@ -121,13 +127,14 @@ an interactive browser using audio as the primary interface which placed page
 elements around a user, focusing on aiding the user maintain orientation while
 browsing on the web~\cite{goose19993dAudio}.
 
-The work by Goose et al. was the fist work demonstrating that binaural techniques
-could be applied to non prerecorded media. The authors began by researching
-how well multiple users could spatialize sound presented to them from regular
-PC audio hardware to determine the best design choice for the interface. The
-observation that most impacted their design was the inability of most users
-to accurately identify the source of sound along the y-axis.  This motivated
-Goose et al. to adopt a horizontal axis interface depicted in ~\ref{fig:goose_horizon}.
+The work by Goose et al. in ~\cite{goose19993dAudio} was the first work to 
+demonstrate that binaural techniques could be applied to non prerecorded media.
+The authors began by researching how well multiple users could spatialize sound
+presented to them from regular PC audio hardware to determine the best design
+choice for the interface. The observation that most impacted their design was
+the inability of most users to accurately identify the source of sound along 
+the y-axis.  This motivated Goose et al. to adopt a horizontal axis interface 
+depicted in ~\ref{fig:goose_horizon}.
 
 \begin{figure}[t]
     \centering
@@ -139,10 +146,13 @@ Goose et al. to adopt a horizontal axis interface depicted in ~\ref{fig:goose_ho
 
 By showing the inefficiency of the y-axis to convey accurate information in the
 audio space, they demonstrated why an interface simulating the reading down of
-a page would be ineffective. Instead, by projecting a document onto the x-axis,
-Goose et al. effectively translated web pages into time lines.  The interface
-could then compute the length of a given web page by calculating the time it
-would take to read.
+a page would be ineffective. Since their work, a number of other researchers have
+verified that this limitation is imposed by the human hearing mechanism and not 
+a limitation of the audio processing producing the 3D transformations
+~\cite{song2010personal, gardner19983, marentakis2004study}. Instead, by 
+projecting a document onto the x-axis, Goose et al. effectively translated web
+pages into time lines.  The interface could then compute the length of a given
+web page by calculating the time it would take to read.
 
 The horizontal time domain allows the interface to communicate both inter-document
 and intra-document links effectively.  To disambiguate the two forms of links,
@@ -356,31 +366,6 @@ causes a user ~\cite{cutrell2001notification}.  In a study, Microsoft
 Researchers found that notifications occurring at the beginning of a task are
 more likely to completely derail focus while those occurring near the completion
 of tasks have mitigated effects.
-
-\section{                  Tactile Notifications                             }
-
-When exploring non-visual interfaces, it is important to consider how the human
-mind operates when interfaces utilize other sensation modalities. Consider
-interfaces that utilize haptic feedback.  It has been shown that for many
-dynamic tasks (such as remote control of robots), haptic interfaces are able to
-provide the user with important types of feedback.  For example, a user is able
-to detect the same forces that might impede the operation of the target object.
-In other situations, users may prefer haptic feedback to audible interactions
-when in social situations where audible interruptions are discouraged.  Other
-uses of haptic interfaces are seen in high precision tasks (such as surgery)
-where it is important to apply the precise torques and forces on both ends.
-Common to all of these interfaces is the purpose of the device is human
-actuation, often at a physically smaller interface~\cite{ellis1996design}.
-There has been work looking at the psychophysical use of power amplification
-as seen in prosthetic engineering, but those are not considered for this
-project.
-
-What is of note is that interfaces that utilize haptic feedback are often set in
-a master/slave relationship between the user and the object on the other end of
-the interface. Complexity is often measured in degrees of freedom that the
-operator has over the slave device.  What is important with haptic feedback is
-that notifications have to be performed in real-time or else stale information
-propagates into large control errors~\cite{ellis1996design}.
 
 \section{                  Auditory Notifications                            }
 
